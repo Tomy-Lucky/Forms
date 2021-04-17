@@ -1,0 +1,46 @@
+<div style="width: 80%; align: center; margin: auto auto 30px;
+  padding-top: 10px; padding-bottom: 10px; border: 3px solid orangered; text-align: center;">
+  <form class="container" [formGroup]="user" (ngSubmit)="onSubmit()">
+    <label>First name: </label>
+    <input type="text" formControlName="firstName" id="firstName"><br>
+    <label>Last name: </label>
+    <input type="text" formControlName="lastName" id="lastName"><br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div style="width: 80%; align: center; margin: auto; padding-top: 10px;
+   padding-bottom: 10px; border: 3px solid silver; text-align: center;">
+  <form #form="ngForm">
+    <p>Form validation :{{form.valid}}</p>
+    <form #form1="ngForm">
+      <p>Form-1(name) validation :{{form1.valid}}</p>
+      <input name="name" [ngModel]="form1.name" type="text" required="required">
+
+      <form #form2="ngForm">
+        <p>Form-2(email) validation :{{form2.valid}}</p>
+        <input name="email" [ngModel]="form2.name" type="email" required="required">
+      </form>
+
+      <form #form3="ngForm">
+        <p>Form-3 validation :{{form3.valid}}</p>
+        <input name="number" [ngModel]="form3.name" type="number" required="required">
+      </form>
+
+      <form #form4="ngForm">
+        <p>Form-4(password) validation :{{form4.valid}}</p>
+        <input name="password" [ngModel]="form4.name" type="password" required="required">
+
+        <form #form5="ngForm">
+          <p>Form-5(text) validation :{{form5.valid}}</p>
+          <input name="name" [ngModel]="form5.name" type="text" required="required">
+        </form>
+      </form>
+    </form>
+  </form>
+</div>
+
+
+
+
